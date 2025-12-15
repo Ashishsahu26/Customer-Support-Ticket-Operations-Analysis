@@ -1,135 +1,112 @@
-Customer Support Ticket Operations & Data Quality Analysis
-📌 Project Overview
+# 📊 Customer Support Ticket Operations & Data Quality Analysis
 
-This project focuses on analyzing customer support ticket data to understand ticket distribution, workload patterns, customer behavior, and data quality issues. The analysis aims to provide operational insights that can help support teams improve monitoring, reporting, and decision-making processes.
+## 📌 Project Overview
+This project analyzes customer support ticket data to understand ticket distribution, workload patterns, customer behavior, and data quality issues.  
+The focus is on deriving operational insights using available data while handling real-world data limitations professionally.
 
-A key aspect of this project is handling real-world data limitations, such as missing response and resolution time information, and adapting the analysis accordingly.
+A key highlight of this project is identifying and reporting missing operational metrics (response and resolution times), which impacts SLA and performance tracking.
 
-🎯 Objectives
+---
 
-Analyze support ticket trends across priority, channel, and status
+## 🎯 Objectives
+- Analyze support ticket trends across priority, channel, and status  
+- Understand workload distribution in customer support operations  
+- Explore customer satisfaction patterns  
+- Identify data quality gaps affecting KPI and SLA tracking  
+- Provide actionable insights for operational improvement  
 
-Understand workload distribution in customer support operations
+---
 
-Explore customer satisfaction patterns
+## 🛠️ Tools & Technologies
+- **Python** – pandas, numpy, matplotlib, seaborn  
+- **SQL** – aggregation and exploratory analysis  
+- **Power BI** – dashboards and visual reporting  
 
-Identify data quality gaps affecting KPI and SLA tracking
+---
 
-Provide actionable insights for operational improvement
+## 📂 Dataset Description
+The dataset consists of customer support ticket records with the following key fields:
+- Ticket ID  
+- Ticket Type  
+- Ticket Priority  
+- Ticket Channel  
+- Ticket Status  
+- Customer Age and Gender  
+- Customer Satisfaction Rating  
 
-🛠️ Tools & Technologies
+⚠️ **Note:**  
+Operational time-based fields such as **First Response Time** and **Time to Resolution** were completely missing across all records and were excluded from time-based KPI calculations.
 
-Python (pandas, numpy, matplotlib, seaborn)
+---
 
-SQL (for exploratory and aggregation analysis)
+## 🔍 Data Cleaning & Preparation
+- Removed records with missing Ticket IDs  
+- Dropped non-informative columns with 100% missing values  
+- Checked for duplicates and data consistency  
+- Performed a data completeness assessment to evaluate missing critical fields  
 
-Power BI (dashboard and visualization)
+---
 
-📂 Dataset Description
+## 📊 Key Analyses Performed
 
-The dataset contains customer support ticket records with features such as:
+### 1️⃣ Ticket Volume Analysis
+- Ticket distribution by priority, channel, and type  
+- Identification of high-volume categories contributing to support workload  
 
-Ticket ID
+### 2️⃣ Ticket Status Analysis
+- Analysis of ticket lifecycle using ticket status distribution  
+- Identification of unresolved and pending ticket patterns  
 
-Ticket Type
+### 3️⃣ Channel & Workload Distribution
+- Channel-wise ticket inflow analysis  
+- Detection of workload imbalance across support channels  
 
-Ticket Priority
+### 4️⃣ Customer Satisfaction Analysis
+- Distribution of customer satisfaction ratings  
+- Evaluation of service experience trends  
 
-Ticket Channel
+### 5️⃣ Data Quality Assessment
+- Analysis of missing values in critical operational fields  
+- Identification of data gaps affecting SLA and efficiency reporting  
 
-Ticket Status
+---
 
-Customer Demographics
-
-Customer Satisfaction Rating
-
-⚠️ Note: Time-based fields such as First Response Time and Time to Resolution were entirely missing in the dataset and hence excluded from KPI calculations.
-
-🔍 Data Cleaning & Preparation
-
-Removed rows with missing Ticket ID values
-
-Dropped non-informative columns with 100% missing values
-
-Converted relevant fields to appropriate data types
-
-Checked for duplicates and data consistency
-
-📊 Key Analyses Performed
-1️⃣ Ticket Volume Analysis
-
-Distribution of tickets by priority, type, and channel
-
-Identification of high-volume categories contributing to support workload
-
-2️⃣ Ticket Status Analysis
-
-Analysis of ticket lifecycle using ticket status distribution
-
-Identification of bottlenecks caused by unresolved or pending tickets
-
-3️⃣ Channel & Workload Distribution
-
-Channel-wise ticket inflow analysis
-
-Insights into uneven workload distribution across support channels
-
-4️⃣ Customer Satisfaction Analysis
-
-Distribution of customer satisfaction ratings
-
-Understanding how operational factors may impact customer experience
-
-5️⃣ Data Quality Assessment
-
-Evaluated completeness of critical operational fields
-
-Identified missing response and resolution time data as a major reporting limitation
-
-📈 Visualizations
-
+## 📈 Visualizations
 The project includes visualizations such as:
+- Ticket distribution by priority  
+- Ticket distribution by channel  
+- Ticket status breakdown  
+- Customer satisfaction rating distribution  
+- Data completeness summary  
 
-Ticket distribution by priority and channel
+---
 
-Ticket status breakdown
+## 🚧 Limitations & Data Quality Findings
+- Response time and resolution time fields were entirely missing  
+- SLA compliance and efficiency KPIs could not be calculated  
+- The absence of operational timestamps highlights gaps in ticket lifecycle tracking  
 
-Customer satisfaction distribution
+---
 
-Data completeness summary
+## ✅ Key Insights
+- Ticket volume is unevenly distributed across priorities and channels  
+- Certain support channels handle a disproportionate share of tickets  
+- Missing operational timestamps significantly limit performance measurement  
+- Data quality assessment itself provides valuable insight into process gaps  
 
-🚧 Limitations & Data Quality Findings
+---
 
-Response time and resolution time columns were completely missing, preventing:
+## 📌 Recommendations
+- Improve logging of response and resolution timestamps in the ticketing system  
+- Use ticket volume and status trends for better resource allocation  
+- Introduce routine data completeness checks in reporting workflows  
 
-SLA compliance analysis
+---
 
-Response and resolution efficiency KPIs
+## 🚀 Future Enhancements
+- Perform SLA and resolution efficiency analysis once time-based data is available  
+- Build predictive models for ticket resolution planning  
+- Enhance Power BI dashboards with operational KPIs  
 
-This indicates a gap in ticket lifecycle tracking and highlights the importance of proper data logging in support systems.
+---
 
-✅ Key Insights
-
-Ticket volume is unevenly distributed across priorities and channels, indicating workload imbalance.
-
-Certain channels contribute disproportionately to total ticket inflow.
-
-Missing operational timestamps significantly limit performance measurement and SLA monitoring.
-
-Data quality assessment itself provides valuable insight into process gaps within support operations.
-
-📌 Recommendations
-
-Improve logging of response and resolution timestamps in the ticketing system.
-
-Use ticket volume and status trends to better allocate support resources.
-
-Establish data completeness checks as part of routine reporting.
-
-🚀 Future Enhancements
-
-Incorporate response and resolution time data for SLA analysis
-
-Build predictive models for ticket resolution estimation once data becomes available
-
-Enhance Power BI dashboards with operational KPIs
